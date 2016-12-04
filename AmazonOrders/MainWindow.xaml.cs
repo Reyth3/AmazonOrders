@@ -24,5 +24,15 @@ namespace AmazonOrders
         {
             InitializeComponent();
         }
+
+        private async void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            var orders = await OrdersManager.GetOrders("https://s.put.re/1PZ3heo.html");
+            var pg2 = await OrdersManager.GetOrders("https://s.put.re/7FfwE36.html");
+            orders.AddRange(pg2);
+            pg2.Clear();
+
+
+        }
     }
 }

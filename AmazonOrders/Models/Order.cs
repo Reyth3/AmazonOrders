@@ -10,5 +10,11 @@ namespace AmazonOrders.Models
     {
         public string Placed { get; set; }
         public string Total { get; set; }
+        public List<Item> Items { get; set; }
+
+        public override string ToString()
+        {
+            return string.Format("Placed on: {0} -- {1} -- Items: {2}", Placed, Total, Items.Count());
+        }
     }
 }
