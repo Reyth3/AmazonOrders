@@ -32,7 +32,7 @@ namespace AmazonOrders
             orders.AddRange(pg2);
             pg2.Clear();
 
-
+            ordersListView.ItemsSource = orders;
         }
     }
 }
